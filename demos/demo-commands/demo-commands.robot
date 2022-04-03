@@ -19,10 +19,10 @@ Test Run Command That Fails And Return Status
     ${result} =    Run Keyword And Return Status   Run    cat hello.py
 
 Test Run Oc Command That Fails
-    Run    oc create -f test-data/service.yaml
+    ${result} =    Run    oc create -f demos/demo-commands/test-data/service.yaml
 
 Test OpenShiftLibrary Keyword That Fails
-    Oc Apply    kind=Service    src=test-data/service.yaml    api_version=v1
+    Oc Apply    kind=Service    src=demos/demo-commands/test-data/service.yaml    api_version=v1
     
 Test OpenShiftLibrary Keyword That Fails And Return Status
     ${result} =    Run Keyword And Return Status    Oc Apply    kind=Service    src=test-data/service.yaml    api_version=v1

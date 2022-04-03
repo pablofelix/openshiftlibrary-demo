@@ -7,7 +7,7 @@ Library      OpenShiftLibrary
 
 *** Test Cases ***
 Test Login To Cluster Locally
-    [Documentation]    Scenario 1: Execute test when logged int to cluster locally
+    [Documentation]    Scenario 1: Execute test when logged in to cluster locally
     ${result} =    Oc Get    kind=Node    api_version=v1 
     Log    ${result[0]['metadata']['annotations']['machine.openshift.io/machine']}
 
